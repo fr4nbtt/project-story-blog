@@ -1,10 +1,10 @@
 {
-  "name": "999---simple-tailwind-starter",
+  "name": "002-project-story-blog",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i ./input.css -o ./css/style.css",
-    "watch": "tailwindcss -i ./input.css -o ./css/style.css --watch"
+    "build": "tailwindcss -i ./css/styles.css -o ./css/tailwind.css",
+    "watch": "tailwindcss -i ./css/styles.css -o ./css/tailwind.css --watch"
   },
   "keywords": [],
   "author": "",
