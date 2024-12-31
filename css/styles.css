@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom Styles */
+
+.outline-debug {
+  outline: 2px solid red;
+}

@@ -3,11 +3,141 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Merriweather:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/tailwind.css" />
     <script src="./js/main.js" defer></script>
     <title>Simple Tailwind Starter</title>
   </head>
-  <body>
-    <h1 class="text-3xl bg-red-200">Simple Tailwind Starter</h1>
+  <body class="min-h-screen flex flex-col bg-white text-gray-800">
+    <!-- Header  -->
+    <header class="w-full bg-deepForest text-white p-4">
+      <div class="flex justify-between items-center max-w-2xl mx-auto">
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+
+        <!-- Blog Title -->
+        <h1 class="text-xl font-semibold font-serif">Story Blog</h1>
+
+        <!-- Navigation - Hidden on Mobile -->
+        <nav class="hidden md:block">
+          <ul class="flex gap-6">
+            <li><a href="#" class="hover:text-gray-600">Home</a></li>
+            <li><a href="#" class="hover:text-gray-600">About</a></li>
+            <li><a href="#" class="hover:text-gray-600">Blog</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow w-full p-4 bg-forestGreen">
+      <div class="max-w-2xl mx-auto space-y-8">
+        <!-- Featured Post -->
+        <section class="space-y-4">
+          <h2 class="text-2xl font-semibold">Latest Post</h2>
+          <article class="border-b border-gray-100 pb-8 bg-sageGray">
+            <div class="space-y-4">
+              <h3 class="text-xl">Post Title</h3>
+
+              <!-- Image container -->
+              <div class="aspect-video w-full overflow-hidden rounded-lg">
+                <img
+                  src="https://picsum.photos/501/750"
+                  alt="Descriptive alt text"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="flex gap-4 text-sm text-gray-600">
+                <span>Dec 30, 2024</span>
+                <span>5 min read</span>
+              </div>
+              <p class="text-zinc-950 font-sans">
+                Brief excerpt from the post that captures attention and
+                encourages readers to click through...
+              </p>
+              <a href="#" class="inline-block text-blue-600 hover:text-blue-800"
+                >Read more →</a
+              >
+            </div>
+          </article>
+        </section>
+
+        <!-- Post List -->
+        <section class="space-y-8">
+          <h2 class="text-2xl font-semibold">Recent Posts</h2>
+          <div class="space-y-8">
+            <!-- Post Card -->
+            <article class="border-b border-gray-100 pb-8 bg-sageGray">
+              <div class="space-y-4">
+                <h3 class="text-xl">Another Post Title</h3>
+                <!-- Image container -->
+                <div class="aspect-video w-full overflow-hidden rounded-lg">
+                  <img
+                    src="https://picsum.photos/500/750"
+                    alt="Descriptive alt text"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="flex gap-4 text-sm text-gray-600">
+                  <span>Dec 28, 2024</span>
+                  <span>3 min read</span>
+                </div>
+                <p class="text-zinc-950">Brief excerpt from the post...</p>
+                <a
+                  href="#"
+                  class="inline-block text-blue-600 hover:text-blue-800"
+                  >Read more →</a
+                >
+              </div>
+            </article>
+
+            <!-- More Post Cards... -->
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer  -->
+    <footer
+      class="w-full bg-deepForest text-white border-t border-gray-100 p-4"
+    >
+      <div
+        class="max-w-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <div class="text-sm">© 2024 Story Blog. All rights reserved.</div>
+        <div class="flex gap-4 text-sm">
+          <a href="#" class="hover:text-gray-600">About</a>
+          <a href="#" class="hover:text-gray-600">Contact</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
