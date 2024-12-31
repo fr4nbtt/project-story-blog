@@ -6,27 +6,43 @@
 
 @layer components {
   .blog-card {
-    @apply border-t-4 border-red-950  bg-sageGray space-y-3 rounded-md p-3 pb-5 shadow-md;
+    @apply border-t-4 border-red-950  bg-sageGray space-y-3 rounded-md p-3.5 pb-5 shadow-md;
   }
 
   .blog-card-title {
-    @apply text-xl font-bold;
+    @apply text-xl font-bold 
+           relative 
+           after:content-[''] after:absolute after:bottom-0 after:left-0 
+           after:w-1/4 after:h-0.5 after:bg-red-950
+           hover:after:w-1/2 after:transition-all after:duration-300;
   }
 
   .blog-card-image {
-    @apply aspect-video w-full overflow-hidden rounded-md border-black border-2;
+    @apply aspect-video w-full overflow-hidden rounded-md border-black border-2
+           transform hover:scale-[1.02] transition-transform duration-300
+           shadow-md hover:shadow-lg;
   }
 
   .blog-card-meta {
-    @apply flex gap-4 text-sm text-gray-700 font-medium;
+    @apply flex gap-4 text-sm text-gray-700 font-medium
+           border-l-2 border-red-950/30 pl-3
+           italic;
   }
 
   .blog-card-excerpt {
-    @apply text-zinc-950 font-medium;
+    @apply text-zinc-950 font-medium
+           leading-relaxed
+           first-letter:text-2xl first-letter:font-serif
+           first-letter:mr-0.5 first-letter:float-left;
   }
 
   .blog-card-link {
-    @apply inline-block text-blue-600 hover:text-blue-800 font-semibold;
+    @apply inline-block text-red-950 hover:text-red-800 font-semibold
+           relative overflow-hidden
+           after:content-[''] after:absolute after:bottom-0 after:left-0 
+           after:w-full after:h-0.5 after:bg-red-950
+           after:transform after:translate-x-[-100%]
+           hover:after:translate-x-0 after:transition-transform after:duration-300;
   }
 
   .blog-section-title {
