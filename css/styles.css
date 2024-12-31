@@ -4,6 +4,32 @@
 
 /* Custom Styles */
 
-.outline-debug {
-  outline: 2px solid red;
+@layer components {
+  .blog-card {
+    @apply border-t-4 border-red-950  bg-sageGray space-y-3 rounded-md p-3 pb-5 shadow-md;
+  }
+
+  .blog-card-title {
+    @apply text-xl font-bold;
+  }
+
+  .blog-card-image {
+    @apply aspect-video w-full overflow-hidden rounded-md border-black border-2;
+  }
+
+  .blog-card-meta {
+    @apply flex gap-4 text-sm text-gray-700 font-medium;
+  }
+
+  .blog-card-excerpt {
+    @apply text-zinc-950 font-medium;
+  }
+
+  .blog-card-link {
+    @apply inline-block text-blue-600 hover:text-blue-800 font-semibold;
+  }
+
+  .blog-section-title {
+    @apply text-2xl font-semibold text-zinc-900;
+  }
 }

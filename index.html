@@ -55,67 +55,62 @@
     </header>
 
     <!-- Main Content -->
-    <main class="flex-grow w-full p-4 bg-forestGreen">
+    <main class="flex-grow w-full p-4 pb-8 bg-forestGreen">
       <div class="max-w-2xl mx-auto space-y-8">
         <!-- Featured Post -->
         <section class="space-y-4">
-          <h2 class="text-2xl font-semibold">Latest Post</h2>
-          <article class="border-b border-gray-100 pb-8 bg-sageGray">
-            <div class="space-y-4">
-              <h3 class="text-xl">Post Title</h3>
+          <h2 class="blog-section-title">Latest Post</h2>
+          <article class="blog-card">
+            <div class="space-y-3">
+              <h3 class="blog-card-title">Post Title</h3>
 
               <!-- Image container -->
-              <div class="aspect-video w-full overflow-hidden rounded-lg">
+              <div class="">
                 <img
                   src="https://picsum.photos/501/750"
                   alt="Descriptive alt text"
-                  class="w-full h-full object-cover"
+                  class="blog-card-image"
                   loading="lazy"
                 />
               </div>
 
-              <div class="flex gap-4 text-sm text-gray-600">
+              <div class="blog-card-meta">
                 <span>Dec 30, 2024</span>
                 <span>5 min read</span>
               </div>
-              <p class="text-zinc-950 font-sans">
+              <p class="blog-card-excerpt">
                 Brief excerpt from the post that captures attention and
                 encourages readers to click through...
               </p>
-              <a href="#" class="inline-block text-blue-600 hover:text-blue-800"
-                >Read more →</a
-              >
+              <a href="#" class="blog-card-link">Read more →</a>
             </div>
           </article>
         </section>
 
         <!-- Post List -->
         <section class="space-y-8">
-          <h2 class="text-2xl font-semibold">Recent Posts</h2>
+          <h2 class="blog-section-title">Recent Posts</h2>
           <div class="space-y-8">
             <!-- Post Card -->
-            <article class="border-b border-gray-100 pb-8 bg-sageGray">
-              <div class="space-y-4">
-                <h3 class="text-xl">Another Post Title</h3>
+            <article class="blog-card">
+              <div class="space-y-3">
+                <h3 class="blog-card-title">Another Post Title</h3>
                 <!-- Image container -->
-                <div class="aspect-video w-full overflow-hidden rounded-lg">
+                <div class="">
                   <img
                     src="https://picsum.photos/500/750"
-                    alt="Descriptive alt text"
-                    class="w-full h-full object-cover"
+                    alt="Descriptive alt
+                  text"
+                    class="blog-card-image"
                     loading="lazy"
                   />
                 </div>
-                <div class="flex gap-4 text-sm text-gray-600">
+                <div class="blog-card-meta">
                   <span>Dec 28, 2024</span>
                   <span>3 min read</span>
                 </div>
-                <p class="text-zinc-950">Brief excerpt from the post...</p>
-                <a
-                  href="#"
-                  class="inline-block text-blue-600 hover:text-blue-800"
-                  >Read more →</a
-                >
+                <p class="blog-card-excerpt">Brief excerpt from the post...</p>
+                <a href="#" class="blog-card-link">Read more →</a>
               </div>
             </article>
 
@@ -127,7 +122,7 @@
 
     <!-- Footer  -->
     <footer
-      class="w-full bg-deepForest text-white border-t border-gray-100 p-4"
+      class="w-full bg-deepForest text-white border-t-2 border-red-900 p-4"
     >
       <div
         class="max-w-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4"
